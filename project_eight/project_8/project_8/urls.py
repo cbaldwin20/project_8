@@ -20,11 +20,14 @@ from django.conf.urls import url
 from django.conf import settings
 
 
+urlpatterns = [
+    path('', include('minerals.urls', namespace="minerals")),
+    path('admin/', admin.site.urls),    
+]
+
 if settings.DEBUG:
     import debug_toolbar
-
-urlpatterns = [
-	path('', include('minerals.urls', namespace="minerals")),
-    path('admin/', admin.site.urls),
-    url(r'^__debug__/', include(debug_toolbar.urls)),
-]
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
+    SHOW_TOOLBAR_CALLBACK = True
