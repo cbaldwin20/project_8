@@ -1,0 +1,7 @@
+{% for letter in letters %}
+	{% if clickable_L == letter %}
+    	<b><a class="bigger" href="{% url 'minerals:letter' letter=letter %}">{{ letter }}</a></b>
+    {% else %}
+		<a href="{% url 'minerals:letter' letter=letter %}">{{ letter }}</a>
+	{% endif %}
+{% endfor %}

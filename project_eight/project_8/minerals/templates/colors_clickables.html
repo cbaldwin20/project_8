@@ -1,0 +1,8 @@
+
+{% for color in colors %}
+	{% if clickable_C == color %}
+    	<b><a class="bigger" href="{% url 'minerals:color' color=color %}">{{ color }}</a></b><br>
+    {% else %}
+    	<a href="{% url 'minerals:color' color=color %}">{{ color }}</a><br>
+	{% endif %}
+{% endfor %}

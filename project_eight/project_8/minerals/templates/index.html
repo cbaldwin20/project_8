@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load clickables %}
+
+{% block body %}
+  
+    <div class="grid-100">
+      <ul class="minerals__container">
+        {% for mineral in all_minerals %}
+          <li class="minerals__item">
+            <a class="minerals__anchor" href="{% url 'minerals:detail' id=mineral.id %}">{{ mineral.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="minerals__random">
+    <!-- template tag -->
+    
+      {% random_number %}
+    
+  </div>
+
+
+{% endblock %}
+
