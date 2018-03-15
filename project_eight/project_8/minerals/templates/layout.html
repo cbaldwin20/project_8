@@ -9,14 +9,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' 
+  rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cousine' 
+  rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{% static 'css/global.css' %}">
 </head>
 <body>
 
 	<section id='colors' >
-	<!-- template tag -->
+	<!--***** template tag below-->
 		{% if clickable_C %}
     		{% colors_list clickable_C %}
     	{% else %}
@@ -26,22 +28,27 @@
     </section>
 
     <section id='groups' >
-    <!-- template tag -->
+    <!--***** template tag below -->
     	{% if clickable %}
 			{% groups_list clickable %}
 		{% else %}
 			{% groups_list %}
 		{% endif %}
     	
-	</section>
+	 </section>
 
 <div class="bounds bounds--small">
     <div class="grid-100">
       <a href="index.html">
-        <svg class="logo" viewBox="0 0 127.6 84.8" preserveAspectRation="xMinYMin meet">
-          <polygon points="42.7,84.8 49.6,79.4 40,62.5 51.2,43.5 51.2,43.5 25,0 0,55.6 "/>
-          <polygon class="logo--middle" points="52.9,79.5 52.9,79.5 84.8,80.1 59.7,35 43.3,62.4 "/>
-          <polygon points="127.6,61.4 127.6,61.4 110.3,13.5 110.3,13.5 70.3,48.1 70.3,48.1 88.3,80.5 95.3,81.4 95.3,81.4 "/>
+        <svg class="logo" viewBox="0 0 127.6 84.8" 
+        preserveAspectRation="xMinYMin meet">
+          <polygon 
+        points="42.7,84.8 49.6,79.4 40,62.5 51.2,43.5 51.2,43.5 25,0 0,55.6 "/>
+          <polygon 
+class="logo--middle" points="52.9,79.5 52.9,79.5 84.8,80.1 59.7,35 43.3,62.4 "/>
+          <polygon 
+    points="127.6,61.4 127.6,61.4 110.3,13.5 110.3,13.5 70.3,48.1 70.3,
+    48.1 88.3,80.5 95.3,81.4 95.3,81.4 "/>
         </svg>
        <a href="{% url 'minerals:home' %}">
         <h1 class="logo__name text-centered">Macky's Minerals</h1>
@@ -52,23 +59,21 @@
     <section class="top-bar-right">
     	<form action="{% url 'minerals:search' %}" method="GET">
     		<ul class="menu">
-    			<li><input type="search" name="q"></li>
+    			<li><input id='searchbox' type="search" name="q"></li>
     			<li><input type="submit" value="Search"></li>
     		</ul>
     	</form>
     </section>
 
     <section id='letters'>
-    <!-- template tag -->
+    <!--***** template tag below -->
     	{% if clickable_L %}
     		{% letters_list clickable_L %}
     	{% else %}
     		{% letters_list %}
     	{% endif %}
-    	
     </section>
     
-
 {% block body %}
 {% endblock %}
 

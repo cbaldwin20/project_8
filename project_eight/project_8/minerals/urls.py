@@ -1,11 +1,7 @@
 from django.urls import path
 from . import views
 
-
-
 app_name = 'minerals'
-
-
 
 urlpatterns = [
 	path('', views.home, name="home"),
@@ -15,3 +11,4 @@ urlpatterns = [
     path('group/<group>/', views.group, name='group'),
     path('color/<color>/', views.color, name='color'),
 ]
+ 

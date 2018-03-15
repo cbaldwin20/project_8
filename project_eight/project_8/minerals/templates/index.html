@@ -7,19 +7,17 @@
       <ul class="minerals__container">
         {% for mineral in all_minerals %}
           <li class="minerals__item">
-            <a class="minerals__anchor" href="{% url 'minerals:detail' id=mineral.id %}">{{ mineral.name }}</a>
+            <a class="minerals__anchor" 
+        href="{% url 'minerals:detail' id=mineral.id %}">{{ mineral.name }}</a>
           </li>
         {% endfor %}
       </ul>
     </div>
   </div>
   <div class="minerals__random">
-    <!-- template tag -->
-    
+    <!--****** template tag below -->
       {% random_number %}
-    
   </div>
-
 
 {% endblock %}
 

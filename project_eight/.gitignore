@@ -1,0 +1,5 @@
+p_8_venv
+geckodriver.log
+__pycache__
+*.pyc
+*_venv

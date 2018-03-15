@@ -4,10 +4,8 @@
 
 {% block body %}
   
-
-
     <div class="grid-100 mineral__container">
-      <h1 class="mineral__name">{{ mineral.name }}</h1>
+      <h1 id="ran_min" class="mineral__name">{{ mineral.name }}</h1>
       <div class="mineral__image-bg">
         {% with 'images/'|add:mineral.name|add:'.jpg' as image_static %}
         <img class="mineral__image" src="{% static image_static %}">
@@ -51,6 +49,5 @@
   <div class="minerals__random">
     {% random_number %}
   </div>
-
 
 {% endblock %}

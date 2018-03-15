@@ -1,9 +1,9 @@
-
-
 {% for group in groups %}
 	{% if group == clickable %}
-		<b><a class="bigger" href="{% url 'minerals:group' group=group %}">{{ group }}</a></b><br>
+		<b><a class="bigger selectorG" 
+			href="">{{ group }}</a></b><br>
 	{% else %}
-		<a href="{% url 'minerals:group' group=group %}">{{ group }}</a><br>
+		<a class="selectorG" 
+		href="{% url 'minerals:group' group=group %}">{{ group }}</a><br>
 	{% endif %}
 {% endfor %}
